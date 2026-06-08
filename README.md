@@ -31,26 +31,36 @@ Simple put, Ollama is a tool that helps use use and manage large language models
 ## ⚡ Quick Start
 
 ```bash
-# 1. Install Ollama
-curl -fsSL https://ollama.ai/install.sh | sh
-
-# 2. Pull a model
-ollama pull llama3.2
-
-# 3. Clone this repo
+# 1. Clone this repo
 git clone https://github.com/inuwamobarak/ollama-python-cookbook
 cd ollama-python-cookbook
-
-# 4. Install deps (or per-section - see each folder)
-pip install ollama
-
+```
+```bash
+# 2. Install Ollama
+curl -fsSL https://ollama.ai/install.sh | sh
+```
+![alt text](<Screenshot 2026-06-08 at 20.45.33-2.png>)
+```bash
+# 3. Install deps (or per-section - see each folder)
+python -m pip install ollama
+```
+```bash
+# 4. Pull a model
+ollama pull llama3.2
+```
+![alt text](<Screenshot 2026-06-08 at 20.52.39-1.png>)
+```bash
 # 5. Run your first script
 python 01-ollama-inference/sync_client.py
 ```
+![alt text](<Screenshot 2026-06-08 at 21.06.50-1.png>)
 
 For Windows: https://ollama.com/download/windows
 
 You might also want to use a separate env for this project. Use which ever you are familiar with. conda or python venv.
+
+NOTE: Installing the Ollama application via curl downloads the system-level application, but it does not automatically install the Python library required for the scripts. Hence, you might need python -m pip install ollama
+
 ---
 
 ## 📦 What's Inside

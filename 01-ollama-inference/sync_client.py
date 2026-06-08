@@ -27,15 +27,19 @@ def chat(user_message: str, model: str = "llama3.2") -> str:
 
 # ── 3. List locally available models ─────────────────────────────────────────
 def list_models() -> list[str]:
-    return [m["name"] for m in ollama.list()["models"]]
+    return [m["model"] for m in ollama.list()["models"]]
 
 
 if __name__ == "__main__":
     print("=== generate() ===")
-    print(generate("Why is the sky blue? Answer in one sentence."))
+    generate_question = "Why is the sky blue? Answer in one sentence."
+    print("Question: ", generate_question)
+    print("Answer: ", generate(generate_question))
 
     print("\n=== chat() ===")
-    print(chat("What is the capital of France?"))
+    chat_question = "What is the capital of France?"
+    print("Question: ", chat_question)
+    print("Answer: ", chat(chat_question))
 
     print("\n=== Available models ===")
     print(list_models())
