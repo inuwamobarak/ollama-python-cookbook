@@ -39,7 +39,7 @@ cd ollama-python-cookbook
 # 2. Install Ollama
 curl -fsSL https://ollama.ai/install.sh | sh
 ```
-![alt text](<Screenshot 2026-06-08 at 20.45.33-2.png>)
+![alt text](<img/Screenshot 2026-06-08 at 20.45.33-2.png>)
 ```bash
 # 3. Install deps (or per-section - see each folder)
 python -m pip install ollama
@@ -48,12 +48,12 @@ python -m pip install ollama
 # 4. Pull a model
 ollama pull llama3.2
 ```
-![alt text](<Screenshot 2026-06-08 at 20.52.39-1.png>)
+![alt text](<img/Screenshot 2026-06-08 at 20.52.39-1.png>)
 ```bash
 # 5. Run your first script
 python 01-ollama-inference/sync_client.py
 ```
-![alt text](<Screenshot 2026-06-08 at 21.06.50-1.png>)
+![alt text](<img/Screenshot 2026-06-08 at 21.06.50-1.png>)
 
 For Windows: https://ollama.com/download/windows
 
