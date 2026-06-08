@@ -6,7 +6,6 @@ Prerequisites:
     ollama pull llama3.2-vision   # or: llava, moondream
 """
 
-import base64
 from io import BytesIO
 from pathlib import Path
 from typing import Union

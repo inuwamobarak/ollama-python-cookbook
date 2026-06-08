@@ -62,6 +62,8 @@ def extract(prompt: str, schema: type[BaseModel], model: str = "llama3.2") -> Ba
         return schema.model_validate_json(raw)
     except ValidationError as e:
         # Fallback: try stripping markdown fences if model added them
+        print("Generic extractor Error: ", e)
+        print("\nProcedding with fallback")
         clean = raw.strip().removeprefix("```json").removesuffix("```").strip()
         return schema.model_validate(json.loads(clean))
 
