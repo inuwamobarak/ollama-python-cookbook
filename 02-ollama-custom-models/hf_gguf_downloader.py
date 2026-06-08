@@ -5,7 +5,6 @@ Prerequisites:
     pip install huggingface_hub ollama
 """
 
-import shutil
 from pathlib import Path
 
 import ollama
